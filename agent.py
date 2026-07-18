@@ -90,6 +90,8 @@ st.markdown(
 
 st.write("")
 
+st.write("API Key Loaded:", bool(st.secrets.get("GEMINI_API_KEY")))
+
 # Connected to LLM
 llm = LLM(
     model = "gemini/gemini-3.5-flash",
