@@ -1,13 +1,9 @@
-from dotenv import load_dotenv
 from crewai import Agent, Task, Crew, LLM
 import os
 from tools import *
 import streamlit as st
 import pandas as pd
 import json
-
-# Load Environment Variables
-load_dotenv()
 
 # Streamlit Configuration
 st.set_page_config(
@@ -97,7 +93,7 @@ st.write("")
 # Connected to LLM
 llm = LLM(
     model = "gemini/gemini-3.5-flash",
-    api_key = os.getenv("GEMINI_API_KEY"),
+    api_key = st.secrets['GEMINI_API_KEY'],
     temperature = 0
 )
 
