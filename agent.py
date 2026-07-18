@@ -92,7 +92,7 @@ st.write("")
 
 # Connected to LLM
 llm = LLM(
-    model = "gemini/gemini-2.5-flash",
+    model = "gemini/gemini-3.5-flash",
     api_key = st.secrets['GEMINI_API_KEY'],
     temperature = 0
 )
